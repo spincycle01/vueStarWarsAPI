@@ -27,8 +27,7 @@ export default {
       e.preventDefault();
       const newResource = {
         id: uuid.v4(),
-        title: this.title,
-        completed: false
+        title: this.title
       };
       this.$emit('add-resource', newResource);
 

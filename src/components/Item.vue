@@ -5,13 +5,6 @@
         <strong>{{ key }}</strong> - <span>{{ val }}</span>
       </li>
     </div>
-    <!-- <Item v-bind:keyResource="key" v-bind:valResource="val"/> -->
-
-    <!-- <p>
-      <input type="checkbox" v-on:change="markComplete" />
-      {{ todo.title }}
-      <button @click="$emit('del-todo', todo.id)" class="del">X</button>
-    </p> -->
   </div>
 </template>
 
@@ -19,11 +12,7 @@
 export default {
   name: 'Item',
   props: ['resource'],
-  methods: {
-    // markComplete() {
-    //   this.todo.completed = !this.todo.completed;
-    // }
-  }
+  methods: {}
 };
 </script>
 

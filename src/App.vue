@@ -2,10 +2,7 @@
   <div id="app">
     <Header />
     <AddStarWarsThing v-on:add-resource="addSWThing" />
-    <StarWarsThings
-      v-bind:swThings="swThings"
-      v-on:del-swThing="deleteSWThing"
-    />
+    <StarWarsThings v-bind:swThings="swThings" />
   </div>
 </template>
 
@@ -28,11 +25,7 @@ export default {
     };
   },
   methods: {
-    deleteSWThing(id) {
-      this.swThings = this.swThings.filter(swThing => swThing.id !== id);
-    },
     addSWThing(newSWThing) {
-      // this.todos = [...this.todos, newTodo];
       this.fetchAPI(newSWThing);
     },
     fetchAPI(starwarsField) {
