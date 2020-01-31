@@ -7,13 +7,13 @@
 </template>
 
 <script>
-import axios from 'axios';
-import StarWarsThings from './components/StarWarsThings';
-import Header from './components/Header';
-import AddStarWarsThing from './components/AddStarWarsThing';
+import axios from "axios";
+import StarWarsThings from "./components/StarWarsThings";
+import Header from "./components/Header";
+import AddStarWarsThing from "./components/AddStarWarsThing";
 
 export default {
-  name: 'app',
+  name: "app",
   components: {
     StarWarsThings,
     Header,
@@ -30,14 +30,14 @@ export default {
     },
     fetchAPI(starwarsField) {
       const field = starwarsField.title.toLowerCase();
-      const url = 'http://localhost:8080/' + field;
+      const url = `http://localhost:8080/${field}`;
       axios
         .get(url)
         .then(response => {
           console.log(response.data.results);
           this.swThings = response.data.results;
         })
-        .catch(err => console.log('Error:', err));
+        .catch(err => console.log("Error:", err));
     }
   }
 };
@@ -45,7 +45,7 @@ export default {
 
 <style>
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: "Avenir", Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
