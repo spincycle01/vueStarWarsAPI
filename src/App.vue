@@ -34,7 +34,6 @@ export default {
       axios
         .get(url)
         .then(response => {
-          console.log(response.data.results);
           this.swThings = response.data.results;
         })
         .catch(err => console.log("Error:", err));
